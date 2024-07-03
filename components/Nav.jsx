@@ -20,9 +20,9 @@ const links = [
   }
 ]
 
-const Nav = () => {
+const Nav = (props) => {
   return (
-    <nav className='fixed w-screen h-20 top-0 !py-0 !px-6 md:!px-24 2xl:!px-56 flex justify-start content-center items-center z-30'>
+    <nav className={`${props.color} transition-colors duration-300 fixed h-20 top-4 sm:top-6 left-1/2 -translate-x-1/2 !py-0 !px-8 2xl:!px-16 rounded-full w-[calc(100vw-24px)] md:w-[calc(100vw-192px)] 2xl:w-[calc(100vw-448px)] flex justify-start content-center items-center z-30`}>
       <Link
         href="/"
       >
@@ -35,7 +35,7 @@ const Nav = () => {
       </Link>
       <ul className="hidden md:flex justify-evenly w-3/5">
         {links.map((el) => {
-          return (<li key={el.text} className="text-lg text-bold">
+          return (<li key={el.text} className="text-lg text-bold text-gray-800 font-heading">
             <Link
               href={el.href}
             >
@@ -44,7 +44,7 @@ const Nav = () => {
           </li>)
         })}
       </ul>
-      <a className="text-lg font-bold justify-self-end w-fit ml-auto" href="tel:+1-800-555-0199">+1-800-555-0199</a>
+      <a className="text-lg font-bold justify-self-end w-fit ml-auto font-heading text-gray-800 " href="tel:+1-800-555-0199">+1-800-555-0199</a>
     </nav>
   )
 }

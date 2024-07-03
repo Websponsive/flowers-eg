@@ -72,6 +72,9 @@ module.exports = {
       lineHeight:{
         '11': '2.75rem',
         '12': '3rem'
+      },
+      fontFamily:{
+        'heading': ['var(--heading-font)'],
       }
     },
   },

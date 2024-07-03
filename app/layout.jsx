@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { Inter, Madimi_One } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const headings = Madimi_One({
+  subsets: ["latin"],
+  weight: ['400'],
+  variable: "--heading-font"
+})
 
 export const metadata = {
   title: "Flowers",
@@ -11,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${headings.variable}`}>{children}</body>
     </html>
   );
 }
