@@ -33,9 +33,9 @@ const Nav = (props) => {
           alt="logo"
         />
       </Link>
-      <ul className="hidden md:flex justify-evenly w-3/5">
+      <ul className="hidden md:flex justify-evenly w-3/5 ">
         {links.map((el) => {
-          return (<li key={el.text} className="text-lg text-bold text-gray-800 font-heading">
+          return (<li key={el.text} className="text-lg text-bold overflow-x-hidden text-gray-800 font-heading relative before:absolute before:w-full before:h-0.5 before:rounded-full before:bottom-0 before:left-0 before:bg-orange-400 before:-translate-x-[110%] hover:before:translate-x-0 before:duration-500 before:transition-transform before:ease-bounce2 ">
             <Link
               href={el.href}
             >
@@ -44,7 +44,7 @@ const Nav = (props) => {
           </li>)
         })}
       </ul>
-      <a className="text-lg font-bold justify-self-end w-fit ml-auto font-heading text-gray-800 " href="tel:+1-800-555-0199">+1-800-555-0199</a>
+      <a className="relative overflow-x-hidden before:absolute before:w-full before:h-0.5 before:rounded-full before:bottom-0 before:left-0 before:bg-orange-400 before:-translate-x-[110%] hover:before:translate-x-0 before:duration-500 before:transition-transform before:ease-bounce2 text-lg font-bold justify-self-end w-fit ml-auto font-heading text-gray-800 " href="tel:+1-800-555-0199">+1-800-555-0199</a>
     </nav>
   )
 }

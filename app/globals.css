@@ -2,3 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes twitch-l{
+  50% {transform: rotateZ(-6deg);}
+}
+.twitch-l{
+  animation: twitch-l 500ms infinite steps(1);
+}
+
+@keyframes twitch-r{
+  50% {transform: rotateZ(6deg);}
+}
+.twitch-r{
+  animation: twitch-r 500ms infinite steps(1);
+}
+
+@keyframes twitch-12{
+  50% {transform: rotateZ(-6deg);}
+}
+.twitch-12{
+  animation: twitch-12 500ms infinite steps(1);
+}
+
+@keyframes twitch-60{
+  50% {transform: rotateZ(66deg);}
+}
+.twitch-60{
+  animation: twitch-60 500ms infinite steps(1);
+}
+
+@keyframes twitch-90{
+  50% {transform: rotateZ(-96deg);}
+}
+.twitch-90{
+  animation: twitch-90 500ms infinite steps(1);
+}
