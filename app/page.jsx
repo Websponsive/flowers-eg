@@ -63,9 +63,9 @@ const Page = () => {
 
   return (
     <main ref={main} className='[&>*]:px-6 md:[&>*]:px-24 [&>*]:py-40 2xl:[&>*]:px-56'>
-      {/* <Nav
+      <Nav
         color={navcolor}
-      /> */}
+      /> 
       <div id="section1" className='bg-gradient-to-t from-amber-200 to-amber-100 min-h-screen grid md:grid-cols-2 content-center gap-40 md:gap-16 !pt-36 relative'>
         <div className="grid gap-6 content-center">
           <h1 className="text-4xl lg:text-5xl 2xl:text-6xl font-bold text-emerald-700 font-heading">
