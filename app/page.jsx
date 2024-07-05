@@ -12,20 +12,20 @@ const featured = [
   {
     img: "/assets/bouquet1.webp",
     alt: "placeholder",
-    header: "Featured item",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit enim voluptatibus"
+    header: "Pastel Delight",
+    desc: "Soft pastel roses, pink carnations, and eucalyptus"
   },
   {
     img: "/assets/bouquet2.webp",
     alt: "placeholder",
-    header: "Featured item",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit enim voluptatibus"
+    header: "Sunset Bloom",
+    desc: "Roses, tulips, snapdragons, lisianthus, and eucalyptus"
   },
   {
     img: "/assets/bouquet3.webp",
     alt: "placeholder",
-    header: "Featured item",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit enim voluptatibus"
+    header: "Blushing Charm",
+    desc: "Pink roses, peonies, white ranunculus, and eucalyptus"
   },
 ]
 
@@ -63,15 +63,15 @@ const Page = () => {
 
   return (
     <main ref={main} className='[&>*]:px-6 md:[&>*]:px-24 [&>*]:py-40 2xl:[&>*]:px-56'>
-      <Nav
+      {/* <Nav
         color={navcolor}
-      />
-      <div id="section1" className='bg-amber-200 min-h-screen grid md:grid-cols-2 content-center gap-40 md:gap-16 !pt-36 relative'>
+      /> */}
+      <div id="section1" className='bg-gradient-to-t from-amber-200 to-amber-100 min-h-screen grid md:grid-cols-2 content-center gap-40 md:gap-16 !pt-36 relative'>
         <div className="grid gap-6 content-center">
-          <h1 className="text-4xl 2xl:text-5xl font-bold text-emerald-700 font-heading">
-            Awesome header for this site
+          <h1 className="text-4xl lg:text-5xl 2xl:text-6xl font-bold text-emerald-700 font-heading">
+            Custom bouquets for your special occasions
           </h1>
-          <h2 className="text-xl 2xl:text-2xl text-stone-600">Short description for this shop, their mission, maybe their dedication to great customer service</h2>
+          <h2 className="text-xl 2xl:text-2xl text-stone-600 max-w-132">Surprise your loved ones with our personalized bouquets, crafted with care and love to bring smiles and joy</h2>
           <MainBtn
             href="/"
             text="Get your bouquet"
@@ -110,10 +110,10 @@ const Page = () => {
       </div>
 
 
-      <div id="section2" className=" bg-emerald-200 relative grid justify-center">
-        <div className="absolute top-0 w-screen h-8 lg:h-16 bg-amber-200 rounded-b-full"></div>
+      <div id="section2" className=" bg-gradient-to-t from-emerald-200 to-emerald-100 relative grid justify-center overflow-x-hidden">
+        <div className="absolute top-0 w-screen h-8 lg:h-16 bg-amber-200 rounded-b-full shadow-xl"></div>
         <h1 className="text-4xl 2xl:text-5xl font-bold text-orange-500 text-center font-heading">
-          Featured stuff:
+          Client favourites:
         </h1>
 
         <div className="grid lg:grid-cols-3 gap-8 2xl:gap-16 mt-24 place-content-center justify-center max-w-5xl relative">
@@ -176,14 +176,14 @@ const Page = () => {
             className="absolute -right-44 top-128 -rotate-12"
           />
           {featured.map((el) => {
-            return ( <div key={el.header} className="lg:max-w-80 bg-green-200 rounded-3xl grid max-lg:grid-cols-2 lg:hover:-translate-y-2 lg:hover:rotate-1 transition-transform duration-500 ease-bounce">
+            return ( <div key={el.header} className="lg:max-w-80 bg-green-200 rounded-3xl grid max-lg:grid-cols-2 lg:hover:-translate-y-2 lg:hover:rotate-1 transition-transform duration-500 ease-bounce shadow-lg">
               <div className="relative w-full aspect-[4/5]">
                 <Image
                   fill
                   style={{objectFit: "cover"}}
                   src={el.img}
                   alt={el.alt}
-                  className="rounded-3xl"
+                  className="rounded-3xl shadow-md"
                 />
               </div>
               <div className="p-6 grid items-center content-center">
@@ -196,8 +196,8 @@ const Page = () => {
       </div>
 
 
-      <div id="section3" className="bg-amber-200 grid justify-center justify-items-center gap-16 relative">
-        <div className="absolute top-0 w-screen h-8 lg:h-16 bg-emerald-200 rounded-b-full"></div>
+      <div id="section3" className="bg-gradient-to-t from-amber-200 to-amber-100 grid justify-center justify-items-center gap-16 relative">
+        <div className="absolute top-0 w-screen h-8 lg:h-16 bg-emerald-200 rounded-b-full shadow-xl"></div>
         <h1 className="text-4xl 2xl:text-5xl font-bold text-emerald-700 text-center font-heading relative">
           Why us ?
           <img 
@@ -205,43 +205,46 @@ const Page = () => {
             alt="heart" 
             height={60} 
             width={60}
-            className="absolute top-1/2 -translate-y-1/2 -left-20 -rotate-6"
+            className="absolute top-1/2 -translate-y-1/2 -left-20 -rotate-6 twitch-r-h"
           />
           <img 
             src="/assets/heart.svg" 
             alt="heart" 
             height={60} 
             width={60}
-            className="absolute top-1/2 -translate-y-1/2 -right-20 rotate-6"
+            className="absolute top-1/2 -translate-y-1/2 -right-20 rotate-6 twitch-l-h"
           />
         </h1>
 
-        <div className="bg-orange-200  h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl">
+        <div className="bg-orange-200 shadow-xl h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl">
           <p className="text-9xl text-orange-700 font-heading font-bold bg-amber-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-20 flex items-center text-center">1.</p>
-          <div className="px-8 md:pl-8 md:pr-12 max-md:py-6 flex items-center text-xl leading-8 text-stone-600 ">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam possimus vel ipsa adipisci officiis rerum pariatur labore soluta incidunt, ipsam, accusantium unde odio illum quibusdam!</p>
+          <div className="px-6 md:pl-8 md:pr-12 max-md:py-6 grid content-center text-xl leading-8 text-stone-600 gap-2">
+            <h3 className=" text-2xl font-heading text-orange-700">Freshest flowers around</h3>
+            <p>Remember that time your florist snuck a withered rose in your bouquet ? That doesn't happen with us - we use only the freshest, most vibrant flowers from local sellers</p>
           </div>
         </div>
 
-        <div className="bg-red-200 h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl">
-          <div className="px-8 md:pl-12 md:pr-8 max-md:py-6 flex items-center text-xl leading-8 text-gray-600">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam possimus vel ipsa adipisci officiis rerum pariatur labore soluta incidunt, ipsam, accusantium unde odio illum quibusdam!</p>
+        <div className="bg-red-200 h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl shadow-xl">
+          <div className="px-6 md:pr-8 md:pl-20 max-md:py-6 grid content-center text-xl leading-8 text-gray-600 gap-2">
+            <h3 className=" text-2xl font-heading text-red-700">Friendliest staff in town</h3>
+            <p>We really take pride in our people - you'll find them to be the most passionate, careful and outgoing peeps you've ever met</p>
           </div>
           <p className="text-9xl text-red-700 font-heading font-bold bg-red-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-16 flex items-center text-center max-md:order-first">2.</p>
         </div>
 
-        <div className="bg-lime-200 h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl">
+        <div className="bg-lime-200 h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl shadow-xl">
           <p className="text-9xl text-green-700 font-heading font-bold bg-lime-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-16 flex items-center text-center">3.</p>
-          <div className="px-8 md:pl-8 md:pr-12 max-md:py-6 flex items-center text-xl leading-8 text-gray-600">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam possimus vel ipsa adipisci officiis rerum pariatur labore soluta incidunt, ipsam, accusantium unde odio illum quibusdam!</p>
+          <div className="px-6 md:pl-8 md:pr-12 max-md:py-6 grid content-center text-xl leading-8 text-gray-600 gap-2">
+            <h3 className=" text-2xl font-heading text-green-700">Your wish - our command</h3>
+            <p>We will make bouquets for any occasion - from birthdays to weddings. We will write cards and add personalized gifts. We will even deliver your flowers wherever you need !</p>
           </div>
         </div>
       </div>
 
-      <div className="bg-emerald-200 min-h-[80vh] max-sm:min-h-screen grid place-items-center place-content-center gap-6 relative">
-        <div className="absolute top-0 w-screen h-8 lg:h-16 bg-amber-200 rounded-b-full"></div>
+      <div className="bg-gradient-to-t from-emerald-200 to-emerald-100 min-h-[80vh] max-sm:min-h-screen grid place-items-center place-content-center gap-6 relative">
+        <div className="absolute top-0 w-screen h-8 lg:h-16 bg-amber-200 rounded-b-full shadow-xl"></div>
         <h2 className="text-4xl 2xl:text-5xl font-bold text-orange-500 text-center font-heading relative">
-          Awesome open-ended question
+          Convinced? Get your bouquet today!
           <img 
             src="/assets/scribble.svg" 
             alt="scribble" 
@@ -271,7 +274,7 @@ const Page = () => {
             className="absolute -right-32 max-md:right-0 -bottom-24 max-md:-bottom-56 -rotate-12 twitch-12"
           />
         </h2>
-        <p className="text-xl 2xl:text-2xl text-center text-slate-600">Short supporting encouraging user to take action</p>
+        <p className="text-xl 2xl:text-2xl text-center text-slate-600">Reach out now and you'll have your flowers by tomorrow!</p>
         <MainBtn
           href="/"
           text="Get your bouquet"
@@ -286,8 +289,8 @@ const Page = () => {
         </div> */}
       </div>
 
-      <div className="bg-teal-900 !py-6 flex justify-center">
-        <a href="https://x.com/eduard_gangan" className="text-xs text-neutral-300 ">Property of Eduard Gangan, 2024</a>
+      <div className="bg-emerald-200 !py-6 flex justify-center">
+        <a href="https://x.com/eduard_gangan" className="text-xs text-emerald-800 ">Follow me on twitter !</a>
       </div>
     </main>
   )

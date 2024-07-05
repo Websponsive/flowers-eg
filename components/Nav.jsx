@@ -22,7 +22,7 @@ const links = [
 
 const Nav = (props) => {
   return (
-    <nav className={`${props.color} transition-colors duration-300 fixed h-20 top-4 sm:top-6 left-1/2 -translate-x-1/2 !py-0 !px-8 2xl:!px-16 rounded-full w-[calc(100vw-24px)] md:w-[calc(100vw-192px)] 2xl:w-[calc(100vw-448px)] flex justify-start content-center items-center z-30`}>
+    <nav className={`${props.color} shadow-xl transition-colors duration-300 fixed h-20 top-4 sm:top-6 left-1/2 -translate-x-1/2 !py-0 !px-8 2xl:!px-16 rounded-full w-[calc(100vw-24px)] md:w-[calc(100vw-192px)] 2xl:w-[calc(100vw-448px)] flex justify-start content-center items-center z-30`}>
       <Link
         href="/"
       >

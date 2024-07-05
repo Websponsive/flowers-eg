@@ -16,6 +16,20 @@
   animation: twitch-r 500ms infinite steps(1);
 }
 
+@keyframes twitch-l-h{
+  50% {transform: rotateZ(-6deg) translateY(-50%);}
+}
+.twitch-l-h{
+  animation: twitch-l-h 500ms infinite steps(1);
+}
+
+@keyframes twitch-r-h{
+  50% {transform: rotateZ(6deg) translateY(-50%);}
+}
+.twitch-r-h{
+  animation: twitch-r-h 500ms infinite steps(1);
+}
+
 @keyframes twitch-12{
   50% {transform: rotateZ(-6deg);}
 }
