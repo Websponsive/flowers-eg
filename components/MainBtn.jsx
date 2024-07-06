@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const MainBtn = (props) => {
   return (
-    <div className="z-0 mt-4">
+    <div id={props.id} className="z-0 mt-4">
       <Link
         href={props.href}
         className="bg-orange-400 w-fit font-heading uppercase text-white px-12 py-4 rounded-full text-lg 2xl:text-xl tracking-wider relative group hover:-translate-x-6 transition-all duration-300 hover:bg-orange-500 shadow-lg hover:shadow-xl min-w-fit"

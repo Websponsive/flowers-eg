@@ -36,6 +36,35 @@ const Page = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    let tl = gsap.timeline({delay: 0.25})
+
+    tl.from(".span", {
+      translateY: "30px",
+      opacity: 0,
+      rotateX: "60deg",
+      stagger: 0.2,
+      duration: 0.5,
+      ease: 'power4.inOut'
+    })
+
+    tl.from(".span-t", {
+      translateY: "15px",
+      opacity: 0,
+      rotateX: "60deg",
+      stagger: 0.05,
+      duration: 0.5,
+      ease: 'power4.inOut'
+    })
+
+    tl.from("#main-btn", {
+      translateY: "15px",
+      opacity: 0,
+      rotateX: "30deg",
+      stagger: 0.05,
+      duration: 0.5,
+      ease: 'power4.inOut'
+    })
+
     ScrollTrigger.create({
       trigger: "#section1",
       start: "bottom 7%",
@@ -59,22 +88,148 @@ const Page = () => {
       onEnter: () => setnavcolor("bg-amber-200"),
       onLeaveBack: () => setnavcolor("bg-emerald-200"),
     })
+
+    let mm = gsap.matchMedia()
+    mm.add("(min-width: 1280px)", () => {
+      gsap.to("#card1", {
+        translateX: '96px',
+        duration: 0.3,
+        ease: "power1.out",
+        scrollTrigger:{
+          trigger: "#card1",
+          start: "top 70%",
+          end: "top 20%",
+          // markers: true,
+          toggleActions: "play reverse play reverse"
+        }
+      })
+      gsap.to("#icon1", {
+        translateX: '-192px',
+        duration: 0.3,
+        ease: "power1.out",
+        scrollTrigger:{
+          trigger: "#card1",
+          start: "top 70%",
+          end: "top 20%",
+          // markers: true,
+          toggleActions: "play reverse play reverse"
+        }
+      })
+
+      gsap.to("#card2", {
+        translateX: '-96px',
+        duration: 0.3,
+        ease: "power1.out",
+        scrollTrigger:{
+          trigger: "#card2",
+          start: "top 70%",
+          end: "top 20%",
+          // markers: true,
+          toggleActions: "play reverse play reverse"
+        }
+      })
+      gsap.to("#icon2", {
+        translateX: '192px',
+        duration: 0.3,
+        ease: "power1.out",
+        scrollTrigger:{
+          trigger: "#card2",
+          start: "top 70%",
+          end: "top 20%",
+          // markers: true,
+          toggleActions: "play reverse play reverse"
+        }
+      })
+
+      gsap.to("#card3", {
+        translateX: '96px',
+        duration: 0.3,
+        ease: "power1.out",
+        scrollTrigger:{
+          trigger: "#card3",
+          start: "top 70%",
+          end: "top 20%",
+          // markers: true,
+          toggleActions: "play reverse play reverse"
+        }
+      })
+      gsap.to("#icon3", {
+        translateX: '-192px',
+        duration: 0.3,
+        ease: "power1.out",
+        scrollTrigger:{
+          trigger: "#card3",
+          start: "top 70%",
+          end: "top 20%",
+          // markers: true,
+          toggleActions: "play reverse play reverse"
+        }
+      })
+    })
   }, {scope: main})
 
   return (
-    <main ref={main} className='[&>*]:px-6 md:[&>*]:px-24 [&>*]:py-40 2xl:[&>*]:px-56'>
+    <main ref={main} className='[&>*]:px-5 md:[&>*]:px-24 [&>*]:py-40 2xl:[&>*]:px-56'>
       <Nav
         color={navcolor}
       /> 
       <div id="section1" className='bg-gradient-to-t from-amber-200 to-amber-100 min-h-screen grid md:grid-cols-2 content-center gap-40 md:gap-16 !pt-36 relative'>
         <div className="grid gap-6 content-center">
-          <h1 className="text-4xl lg:text-5xl 2xl:text-6xl font-bold text-emerald-700 font-heading">
-            Custom bouquets for your special occasions
+          <h1 id="main-header" className="text-4xl lg:text-5xl 2xl:text-6xl font-bold text-emerald-700 font-heading *:inline-block">
+            <span className="span">Custom</span>
+            <span>&nbsp;</span>
+            <span className="span">bouquets</span>
+            <span>&nbsp;</span>
+            <span className="span">for</span>
+            <span>&nbsp;</span>
+            <span className="span">your</span>
+            <span>&nbsp;</span>
+            <span className="span">special</span>
+            <span>&nbsp;</span>
+            <span className="span">occasions</span>
           </h1>
-          <h2 className="text-xl 2xl:text-2xl text-stone-600 max-w-132">Surprise your loved ones with our personalized bouquets, crafted with care and love to bring smiles and joy</h2>
+          <h2 className="text-xl 2xl:text-2xl text-stone-600 max-w-132 *:inline-block">
+            <span className="span-t">Surprise</span>
+            <span>&nbsp;</span>
+            <span className="span-t">your</span>
+            <span>&nbsp;</span>
+            <span className="span-t">loved</span>
+            <span>&nbsp;</span>
+            <span className="span-t">ones</span>
+            <span>&nbsp;</span>
+            <span className="span-t">with</span>
+            <span>&nbsp;</span>
+            <span className="span-t">our</span>
+            <span>&nbsp;</span>
+            <span className="span-t">personalized</span>
+            <span>&nbsp;</span>
+            <span className="span-t">bouquets,</span>
+            <span>&nbsp;</span>
+            <span className="span-t">crafted</span>
+            <span>&nbsp;</span>
+            <span className="span-t">with</span>
+            <span>&nbsp;</span>
+            <span className="span-t">care</span>
+            <span>&nbsp;</span>
+            <span className="span-t">and</span>
+            <span>&nbsp;</span>
+            <span className="span-t">love</span>
+            <span>&nbsp;</span>
+            <span className="span-t">to</span>
+            <span>&nbsp;</span>
+            <span className="span-t">bring</span>
+            <span>&nbsp;</span>
+            <span className="span-t">smiles</span>
+            <span>&nbsp;</span>
+            <span className="span-t">and</span>
+            <span>&nbsp;</span>
+            <span className="span-t">joy</span>
+            <span>&nbsp;</span>
+          </h2>
           <MainBtn
             href="/"
             text="Get your bouquet"
+            id="main-btn"
           />
         </div>
         <div className="place-self-center relative lg:mt-24">
@@ -216,24 +371,54 @@ const Page = () => {
           />
         </h1>
 
-        <div className="bg-orange-200 shadow-xl h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl">
-          <p className="text-9xl text-orange-700 font-heading font-bold bg-amber-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-20 flex items-center text-center">1.</p>
+        <div id="card1" className="bg-orange-200 shadow-xl h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl z-0">
+          <p className="text-9xl text-orange-700 font-heading font-bold bg-amber-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-20 flex items-center text-center relative">
+            1.
+            <img 
+              src="/assets/bouquet.svg" 
+              alt="cartoony bouquet" 
+              width={150}
+              height={150}
+              id="icon1"
+              className="absolute left-1 top-1/2 -translate-y-1/2 -z-10"
+            />
+          </p>
           <div className="px-6 md:pl-8 md:pr-12 max-md:py-6 grid content-center text-xl leading-8 text-stone-600 gap-2">
             <h3 className=" text-2xl font-heading text-orange-700">Freshest flowers around</h3>
             <p>Remember that time your florist snuck a withered rose in your bouquet ? That doesn't happen with us - we use only the freshest, most vibrant flowers from local sellers</p>
           </div>
         </div>
 
-        <div className="bg-red-200 h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl shadow-xl">
+        <div id="card2" className="bg-red-200 h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl shadow-xl z-0">
           <div className="px-6 md:pr-8 md:pl-20 max-md:py-6 grid content-center text-xl leading-8 text-gray-600 gap-2">
             <h3 className=" text-2xl font-heading text-red-700">Friendliest staff in town</h3>
             <p>We really take pride in our people - you'll find them to be the most passionate, careful and outgoing peeps you've ever met</p>
           </div>
-          <p className="text-9xl text-red-700 font-heading font-bold bg-red-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-16 flex items-center text-center max-md:order-first">2.</p>
+          <p className="text-9xl text-red-700 font-heading font-bold bg-red-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-16 flex items-center text-center max-md:order-first relative">
+            2.
+            <img 
+              src="/assets/florist.svg" 
+              alt="cartoony florist" 
+              width={150}
+              height={150}
+              id="icon2"
+              className="absolute right-0 top-1/2 -translate-y-1/2 -z-10"
+            />
+          </p>
         </div>
 
-        <div className="bg-lime-200 h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl shadow-xl">
-          <p className="text-9xl text-green-700 font-heading font-bold bg-lime-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-16 flex items-center text-center">3.</p>
+        <div id="card3" className="bg-lime-200 h-fit w-fit flex max-md:flex-col max-md:rounded-3xl rounded-full max-w-4xl shadow-xl z-0">
+          <p className="text-9xl text-green-700 font-heading font-bold bg-lime-100 max-md:rounded-3xl rounded-full max-md:w-full w-fit md:aspect-square max-md:py-4 px-8 md:px-16 flex items-center text-center relative">
+            3.
+            <img 
+              src="/assets/letter.svg" 
+              alt="cartoony letter" 
+              width={150}
+              height={150}
+              id="icon3"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            />
+          </p>
           <div className="px-6 md:pl-8 md:pr-12 max-md:py-6 grid content-center text-xl leading-8 text-gray-600 gap-2">
             <h3 className=" text-2xl font-heading text-green-700">Your wish - our command</h3>
             <p>We will make bouquets for any occasion - from birthdays to weddings. We will write cards and add personalized gifts. We will even deliver your flowers wherever you need !</p>
@@ -278,6 +463,7 @@ const Page = () => {
         <MainBtn
           href="/"
           text="Get your bouquet"
+          id=" "
         />
         {/* <div className="absolute bottom-0 w-full h-24 flex">
           <img src="/assets/heart.svg" alt="heart" height={100} width={100}/>

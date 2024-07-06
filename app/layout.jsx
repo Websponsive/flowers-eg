@@ -1,5 +1,6 @@
 import { Inter, Madimi_One } from "next/font/google";
 import "./globals.css";
+import SmoothScroller from "@/components/SmoothScroller";
 
 const inter = Inter({ subsets: ["latin"] });
 const headings = Madimi_One({
@@ -16,7 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${headings.variable}`}>{children}</body>
+      <body className={`${inter.className} ${headings.variable}`}>
+        <SmoothScroller>
+          {children}
+        </SmoothScroller>
+      </body>
     </html>
   );
 }
