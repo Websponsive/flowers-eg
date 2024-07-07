@@ -169,62 +169,39 @@ const Page = () => {
   }, {scope: main})
 
   return (
-    <main ref={main} className='[&>*]:px-5 md:[&>*]:px-24 [&>*]:py-40 2xl:[&>*]:px-56'>
+    <main ref={main} className='[&>*]:px-5 md:[&>*]:px-24 [&>*]:py-40 2xl:[&>*]:px-56 overflow-x-hidden'>
       <Nav
         color={navcolor}
       /> 
       <div id="section1" className='bg-gradient-to-t from-amber-200 to-amber-100 min-h-screen grid md:grid-cols-2 content-center gap-40 md:gap-16 !pt-36 relative'>
         <div className="grid gap-6 content-center">
           <h1 id="main-header" className="text-4xl lg:text-5xl 2xl:text-6xl font-bold text-emerald-700 font-heading *:inline-block">
-            <span className="span">Custom</span>
-            <span>&nbsp;</span>
-            <span className="span">bouquets</span>
-            <span>&nbsp;</span>
-            <span className="span">for</span>
-            <span>&nbsp;</span>
-            <span className="span">your</span>
-            <span>&nbsp;</span>
-            <span className="span">special</span>
-            <span>&nbsp;</span>
-            <span className="span">occasions</span>
+            <span className="span">Custom&nbsp;</span>
+            <span className="span">bouquets&nbsp;</span>
+            <span className="span">for&nbsp;</span>
+            <span className="span">your&nbsp;</span>
+            <span className="span">special&nbsp;</span>
+            <span className="span">occasions&nbsp;</span>
           </h1>
           <h2 className="text-xl 2xl:text-2xl text-stone-600 max-w-132 *:inline-block">
-            <span className="span-t">Surprise</span>
-            <span>&nbsp;</span>
-            <span className="span-t">your</span>
-            <span>&nbsp;</span>
-            <span className="span-t">loved</span>
-            <span>&nbsp;</span>
-            <span className="span-t">ones</span>
-            <span>&nbsp;</span>
-            <span className="span-t">with</span>
-            <span>&nbsp;</span>
-            <span className="span-t">our</span>
-            <span>&nbsp;</span>
-            <span className="span-t">personalized</span>
-            <span>&nbsp;</span>
-            <span className="span-t">bouquets,</span>
-            <span>&nbsp;</span>
-            <span className="span-t">crafted</span>
-            <span>&nbsp;</span>
-            <span className="span-t">with</span>
-            <span>&nbsp;</span>
-            <span className="span-t">care</span>
-            <span>&nbsp;</span>
-            <span className="span-t">and</span>
-            <span>&nbsp;</span>
-            <span className="span-t">love</span>
-            <span>&nbsp;</span>
-            <span className="span-t">to</span>
-            <span>&nbsp;</span>
-            <span className="span-t">bring</span>
-            <span>&nbsp;</span>
-            <span className="span-t">smiles</span>
-            <span>&nbsp;</span>
-            <span className="span-t">and</span>
-            <span>&nbsp;</span>
-            <span className="span-t">joy</span>
-            <span>&nbsp;</span>
+            <span className="span-t">Surprise&nbsp;</span>
+            <span className="span-t">your&nbsp;</span>
+            <span className="span-t">loved&nbsp;</span>
+            <span className="span-t">ones&nbsp;</span>
+            <span className="span-t">with&nbsp;</span>
+            <span className="span-t">our&nbsp;</span>
+            <span className="span-t">personalized&nbsp;</span>
+            <span className="span-t">bouquets,&nbsp;</span>
+            <span className="span-t">crafted&nbsp;</span>
+            <span className="span-t">with&nbsp;</span>
+            <span className="span-t">care&nbsp;</span>
+            <span className="span-t">and&nbsp;</span>
+            <span className="span-t">love&nbsp;</span>
+            <span className="span-t">to&nbsp;</span>
+            <span className="span-t">bring&nbsp;</span>
+            <span className="span-t">smiles&nbsp;</span>
+            <span className="span-t">and&nbsp;</span>
+            <span className="span-t">joy&nbsp;</span>
           </h2>
           <MainBtn
             href="/"

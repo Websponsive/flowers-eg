@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection{
+  background-color: #fdba74;
+}
+html{
+  scrollbar-color: rgb(249 115 22) rgb(253 186 116);
+}
+
+@layer components {
+  ::-webkit-scrollbar{
+    @apply w-2
+  }
+  ::-webkit-scrollbar-track{
+    @apply bg-orange-300
+  }
+  ::-webkit-scrollbar-thumb{
+    @apply w-2 hover:bg-orange-500 rounded-full bg-orange-400 
+  }
+} 
+
 @keyframes twitch-l{
   50% {transform: rotateZ(-6deg);}
 }

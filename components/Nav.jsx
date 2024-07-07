@@ -27,9 +27,9 @@ const Nav = (props) => {
         href="/"
       >
         <Image
-          height={60}
-          width={60}
-          src="/next.svg"
+          height={50}
+          width={50}
+          src="/assets/bouquet.svg"
           alt="logo"
         />
       </Link>
