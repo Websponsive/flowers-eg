@@ -14,7 +14,7 @@ export const metadata = {
   metadataBase: "https://flowers-eg.netlify.app",
   description: 'Surprise your loved ones with our personalized bouquets, crafted with care and love to bring smiles and joy. Reach out now and you\'ll have your flowers by tomorrow!',
   openGraph: {
-    title: 'TransfeRome',
+    title: 'Custom bouquets for all occasions',
     description: 'Surprise your loved ones with our personalized bouquets, crafted with care and love to bring smiles and joy. Reach out now and you\'ll have your flowers by tomorrow!',
     images: '/assets/bouquet.webp'
   },
