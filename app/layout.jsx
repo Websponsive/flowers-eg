@@ -18,6 +18,12 @@ export const metadata = {
     description: 'Surprise your loved ones with our personalized bouquets, crafted with care and love to bring smiles and joy. Reach out now and you\'ll have your flowers by tomorrow!',
     images: '/assets/bouquet.webp'
   },
+  twitter:{
+    card: 'summary_large_image',
+    title: 'Custom bouquets for all occasions',
+    description: 'Surprise your loved ones with our personalized bouquets, crafted with care and love to bring smiles and joy. Reach out now and you\'ll have your flowers by tomorrow!',
+    image: '/assets/bouquet.webp',
+  },
   icons: {
     shortcut: { url: "/favicon.ico", type: "image/x-icon" },
     icon: [
